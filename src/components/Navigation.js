@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "react-router-dom";
-const Navigation = () => <nav>
+const Navigation = ({ userObj }) => <nav>
     <ul>
         <li><Link to="/">HOME</Link></li>
-        <li><Link to="/profile">MY PROFILE</Link></li>
+        <li><Link to="/profile">{userObj.displayName} Profile</Link></li>
     </ul>
 </nav>;
 export default Navigation;
